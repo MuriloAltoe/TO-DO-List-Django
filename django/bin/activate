@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/murilo/Desktop/repositorios/TO-DO-List-Django/django"
+VIRTUAL_ENV="/home/murilo/Área de Trabalho/repositorios/desenvolvimento-web-3/FATEC_DES_WEB3_mini_avaliacao_3/django"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

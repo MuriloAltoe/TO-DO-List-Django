@@ -1,4 +1,6 @@
-#!/home/murilo/Desktop/repositorios/TO-DO-List-Django/django/bin/python3
+#!/bin/sh
+'''exec' "/home/murilo/Área de Trabalho/repositorios/desenvolvimento-web-3/FATEC_DES_WEB3_mini_avaliacao_3/django/bin/python3" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys
