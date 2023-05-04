@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    { % load static %}
+    <title>Lista do que fazer</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h2{
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body{
+        background-color: rgb(140, 241, 157);
+    }
+</style>
+<body>
+    <h2>
+        Bem vindo ao site de tarefas, aqui estão as tarefas de hoje!!
+    </h2>
+    <h1>
+        {{tarefas_do_dia}}
+    </h1>
+    
+<!-- <img src="{ % static capibara_sem_tarefa.jpg%}">
+<img src="../static/capivara_tem_tarefa.jpg"> -->
+</body>
+</html>
