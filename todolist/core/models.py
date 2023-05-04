@@ -10,5 +10,5 @@ class modelLista(models.Model):
         return self.tarefa
 
     class Meta:
-        verbose_name_plural = 'Lista do que fazer'
-        verbose_name = 'Lista do que fazer'
+        verbose_name_plural = 'o que fazer'
+        verbose_name = 'o que fazer'
