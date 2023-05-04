@@ -14,7 +14,7 @@ def verificar_tarefas(request):
     all_tarefas = ''
 
     for cursor_tarefa in select_tarefas: 
-        if (cursor_tarefa.dia == dia_de_hoje.day and cursor_tarefa.mes == dia_de_hoje.month):
+        if (cursor_tarefa.data == dia_de_hoje):
             all_tarefas = all_tarefas + ' -> ' + cursor_tarefa.tarefa     
     
     mensagem_para_tela = 'Hoje temos as seguintes tarefas: ' + str(all_tarefas)
@@ -24,7 +24,5 @@ def verificar_tarefas(request):
     Tarefas = {
         'tarefas_do_dia' : mensagem_para_tela
     }        
-            
- 
-
+    
     return render(request, 'index.html', Tarefas)
