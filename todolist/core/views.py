@@ -2,7 +2,24 @@ from datetime import datetime
 from django.http import HttpResponse
 from django.shortcuts import render
 from core.models import modelLista
+from core.forms import modelListaForm
 from datetime import date
+
+
+def cadastro(request):
+    if request.method == 'POST':
+        form = modelListaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'cadastro_success.html')
+    else:
+        form = modelListaForm()
+    return render(request, 'cadastro.html', {'form': form})
+
+def voltar(request):
+    return render(request, 'cadastro.html')
+
+
 
 def verificar_tarefas(request):
     dia_de_hoje = date.today()
