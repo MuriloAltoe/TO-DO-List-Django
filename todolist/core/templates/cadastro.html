@@ -21,17 +21,17 @@
     }
 </style>
 <body>
-    <h2>
-        Bem vindo ao site de tarefas, aqui estão as tarefas de hoje!!
-    </h2>
-    <h1>
-        {{tarefas_do_dia}}
-    </h1>
+    <br><br>
+    <form action={% url 'core:cadastro' %} novalidate method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h3>Cadastro de Atividade | To-Do List</h3>
+        Nome da Atividade: {{ form_tarefa.tarefa }}
+        <br>
+        Insira a data:
+        <input type="date" value=" {{ form_atividade.data_atividade }}">
+        <br>
+        <input type="submit" value="Cadastro">
+    </form>
 
-    <a href="/cadastro"><button>Cadastrar Atividade</button></a>
-    <a href="/admin"><button>Editar Atividade</button></a>
     <a href="/"><button>Home</button></a>
-<!-- <img src="{ % static capibara_sem_tarefa.jpg%}">
-<img src="../static/capivara_tem_tarefa.jpg"> -->
 </body>
-</html>
